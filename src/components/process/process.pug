@@ -1,0 +1,39 @@
+include ../../views/helpers/mixins.pug
+
+-
+  let processItems = [
+    {
+      number: 1,
+      text: 'Рассчёт предварительной заявки'
+    },
+    {
+      number: 2,
+      text: 'Замер объекта нашим инженером'
+    },
+    {
+      number: 3,
+      text: 'Составление Коммерческого предложения по изделиям дымохода и окончательной сметы на  работы '
+    },
+    {
+      number: 4,
+      text: 'Изготовление Дымохода, покраска (если требуется)'
+    },
+    {
+      number: 5,
+      text: 'Монтаж продукции, проверка и наладкапробный запуск системы и последующая эксплуатация'
+    },
+    {
+      number: 6,
+      text: 'Гарантийное обслуживание по соответствующем сроку'
+    },
+  ]
+
+.process
+  .container.redline
+    .process__inner
+      +blockTitle('Процесс выполнения монтажа', 'process__title')
+      .process__list
+        each item in processItems
+          .process__item
+            .process__item-number=item.number
+            p.process__item-text=item.text

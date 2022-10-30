@@ -5,6 +5,7 @@ html {
 *,
 *::before,
 *::after {
+  margin: 0;
   box-sizing: inherit;
 }
 
@@ -21,6 +22,22 @@ html {
   font-size: 16px;
 }
 
+.block__title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  @include mobile {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -34,6 +51,10 @@ a {
 
 ul {
   list-style: none;
+}
+
+.text-red {
+  color: var(--red);
 }
 
 .is-hidden {
@@ -80,9 +101,23 @@ ul {
 .container-fluid {
   margin: 0 72px 0 63px;
   max-width: var(--container-fluid-width);
-  
+
   @media screen and (max-width: 768px) {
     margin: var(--media-margin);
+  }
+}
+
+.redline {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 74px;
+    height: 5px;
+    background-color: var(--red);
+    top: 0;
+    left: 0;
   }
 }
 

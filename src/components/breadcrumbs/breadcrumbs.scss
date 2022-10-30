@@ -1,5 +1,13 @@
 .breadcrumbs {
   margin-bottom: 80px;
+
+  @include tablet {
+    margin-bottom: 60px;
+  }
+
+  @include mobile {
+    margin-bottom: 16px;
+  }
 }
 
 .breadcrumbs__inner {
