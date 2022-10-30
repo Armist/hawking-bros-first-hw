@@ -1,2 +1,40 @@
+include ../../views/helpers/mixins.pug
+
+- 
+  let navList = ['Каталог товаров', 'Доставка и оплата', 'Цены', 'Контакты']
+  let headerSocials = ['vk', 'telegram', 'instagram', 'whatsapp']
+  let headerButtons = ['loupe', 'heart', 'cart']
+
 header.header
-  h2 Header
+  .container-fluid
+    .header__inner
+      a.header__logo(href="#")
+        img(src="../../assets/images/d4a2e71366abd518805e76ff61278d8c.png" alt="")
+      +burger
+      nav.header__nav
+        ul.header__nav-list 
+          each item in navList
+            li.header__nav-item
+              a(href="#")= item 
+      .header__contacts
+        span.header__contacts-phone
+          | +7 (812) 
+          span 509 21 98
+        span.header__contacts-call 
+          a(href="#") перезвоните мне 
+        span.header__contacts-socials
+          each social in headerSocials
+            a(href="#")
+              svg
+                use(xlink:href=`../../assets/images/sprite.svg#${social}`)
+      .header__buttons
+        button.btn-reset.header__button
+          svg
+            use(xlink:href='../../assets/images/sprite.svg#loupe')
+        button.btn-reset.header__button
+          svg
+            use(xlink:href='../../assets/images/sprite.svg#heart')
+        button.btn-reset.header__button
+          svg
+            use(xlink:href='../../assets/images/sprite.svg#cart')  
+        +burger

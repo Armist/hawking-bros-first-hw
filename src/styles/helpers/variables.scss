@@ -1,13 +1,19 @@
 :root {
-  --font-family: "Jost", sans-serif;
+  --font-family: 'Montserrat', sans-serif;
   --container-width: 1220px;
   --container-fluid-width: 1786px;
+  --media-margin: 0px 15px;
 
   // colors
   --white: #fff;
   --black: #000;
-  --green: #4C858B;
-  --red: #E33E54;
-  --red-darken: #AE2236;
-  --orange: #EA6628;
+  --green: #4c858b;
+  --red: #e33e54;
+  --red-darken: #ae2236;
+  --orange: #ea6628;
+  --gray: #e5e5e5;
+  --text-gray: #b1b1b1;
+
+  //transition
+  --transition: all 0.25s ease-in-out;
 }

@@ -1,0 +1,15 @@
+mixin breadcrumb(text)
+  div.breadcrumbs__item 
+        a.breadcrumbs__item-title(href="#")=text
+        div.breadcrumbs__item-icon
+          svg
+            use(xlink:href='../../assets/images/sprite.svg#arrow')
+
+-
+  let breadcrumbs = ['Главная', 'Монтаж дымоходов']
+
+.breadcrumbs
+  .container
+    .breadcrumbs__inner
+      each breadcrumb in breadcrumbs
+        +breadcrumb(breadcrumb)

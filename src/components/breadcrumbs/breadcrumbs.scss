@@ -1,0 +1,51 @@
+.breadcrumbs {
+  margin-bottom: 80px;
+}
+
+.breadcrumbs__inner {
+  padding: 16px 0;
+  border-top: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+  @include flex-v-center;
+  flex-direction: row;
+}
+
+.breadcrumbs__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 6px;
+  &-title {
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--text-gray);
+    margin-right: 7px;
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--red);
+    }
+  }
+
+  &-icon {
+    width: 7px;
+    height: 7px;
+    @include flex-all-center;
+
+    svg {
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  &:last-child {
+    pointer-events: none;
+    a {
+      color: var(--green);
+    }
+
+    svg {
+      display: none;
+    }
+  }
+}
