@@ -7,6 +7,7 @@ html {
 *::after {
   margin: 0;
   box-sizing: inherit;
+  font-family: var(--font-family, sans-serif);
 }
 
 .page {
@@ -20,6 +21,33 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    color: inherit;
+  
+    a {
+      @include flex-all-center;
+      color: inherit;
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+
+      &:hover {
+        svg {
+          color: var(--red);
+        }
+      }
+    }
+
+    svg {
+      color: inherit;
+      height: 20px;
+      width: 20px;
+      transition: var(--transition);
+    }  
 }
 
 .block__title {

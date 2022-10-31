@@ -7,3 +7,18 @@ mixin burger
 mixin blockTitle(text, className)
   h2.block__title(class=className)
     | #{text}
+
+mixin socials(className)
+  span.socials(class=className)
+    a(href="#")
+      svg
+        use(xlink:href=`../../assets/images/sprite.svg#vk`)
+    a(href="#")
+      svg
+        use(xlink:href=`../../assets/images/sprite.svg#telegram`)
+    a(href="#")
+      svg
+        use(xlink:href=`../../assets/images/sprite.svg#instagram`)
+    a(href="#")
+      svg
+        use(xlink:href=`../../assets/images/sprite.svg#whatsapp`)

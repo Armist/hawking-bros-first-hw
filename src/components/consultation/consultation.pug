@@ -1,0 +1,19 @@
+-
+  let consultationSocials = ['vk', 'telegram', 'instagram', 'whatsapp']
+
+.consultation
+  .container
+    .consultation__inner
+      h2.consultation__title необходима консультация?
+      p.consultation__undertitle оставьте заявку или свяжитесь с нами в социальных сетях
+      +socials('consultation__socials')
+      form.consultation__form
+        p.form__text
+          | Для 
+          span консультации 
+          | заполните форму!
+        p.form__subtext С Вами свяжутся в ближайшее время
+        .form__controls
+          input.input-reset.form__name.form__input(type="text" placeholder="Ваше имя")
+          input.input-reset.form__phone.form__input(type="text" placeholder="Ваш телефон")
+          button.btn-reset.form__button отправить

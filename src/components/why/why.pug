@@ -1,0 +1,33 @@
+-
+  let whyItems = [
+    {
+      icon: 'why1',
+      title: 'Большой гарантийный срок',
+      text: `Крепёж, стыковка элементов – <span class='text-red'>10 лет</span><br>
+        Сквозная коррозия труб – <span class='text-red'>5 лет</span><br>
+        Гидроизоляция – <span class='text-red'>3 года</span><br>`
+  },
+  {
+    icon: 'why2',
+    title: 'Помощь в покупке агрегата',
+    text: '(печи, камина, котла), а также качественной установке на объекте с последующим гарантийным сервисом'
+  },
+  {
+    icon: 'why3',
+    title: 'Реальные отзывы клиентов',
+    text: 'Убедитесь в добросовестности исполнения, прочитав Отзывы клиентов в специальном разделе.'
+  },
+  ]
+
+.why
+  .container.redline
+    .why__inner
+      +blockTitle('Почему Дымоход.ру?', 'why__title')
+      p.why__text В отличие от других производителей, мы ручаемся за качество продукции, т.к. все Дымоходы изготавливаются из качественной стали, проверенного теплоизолятора, по современной технологии плазменной сварки «встык»
+      .why__items
+        each item in whyItems
+          .why__item
+            svg.why__item-icon
+              use(xlink:href=`../../assets/images/sprite.svg#${item.icon}`)
+            h3.why__item-title= item.title
+            p.why__item-text !{item.text}
