@@ -121,7 +121,7 @@ ul {
   margin: 0 auto;
   max-width: var(--container-width);
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1260px) {
     margin: var(--media-margin);
   }
 }
@@ -130,7 +130,7 @@ ul {
   margin: 0 72px 0 63px;
   max-width: var(--container-fluid-width);
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1260px) {
     margin: var(--media-margin);
   }
 }

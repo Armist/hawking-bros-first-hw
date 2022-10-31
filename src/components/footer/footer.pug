@@ -1,1 +1,48 @@
+-
+  let catalogItems = [
+    'Дымоходы',
+    'Камины',
+    'Дымососы',
+    'Силикат кальция',
+    'Печи для дома',
+    'Котлы',
+    'Печи для бани',
+    'Ещё',
+  ]
+  let informationItems = [
+    'Каталог',
+    'Полезное',
+    'Установка и монтаж',
+    'Контакты',
+    'Отзывы',
+    'Оплата и доставка',
+    'Ликвидация товара',
+  ]
 
+footer.footer
+  .container
+    .footer__inner
+      .footer__column 
+        h4.column__title Каталог
+        .column__items
+          each item in catalogItems
+            a.column__item(href="#")= item
+      .footer__column 
+        h4.column__title Информация
+        .column__items
+          each item in informationItems
+            a.column__item(href="#")= item
+      .footer__column 
+        h4.column__title Время работы
+        span.column__time
+          svg
+            use(xlink:href=`../../assets/images/sprite.svg#clock`)
+          span.text-green пн-пт 
+          |9:00 - 20:00 
+          span.text-green сб-вс 
+          |10:00 - 18:00
+        span.column__place
+          svg
+            use(xlink:href=`../../assets/images/sprite.svg#marker`)
+          span г. Санкт - Петербург , ул. Тамбасова д.7
+        +socials('footer__socials')
